@@ -1,0 +1,190 @@
+:root {
+    --main-background: hsl(233, 47%, 7%);
+    --soft-violet: hsl(277, 64%, 61%);
+    --dark-desaturated-blue: hsl(244, 38%, 16%);
+    --neutral-white: hsl(0, 0%, 100%);
+    --main-paragraph: hsla(0, 0%, 100%, 0.75);
+    --stat-headings: hsla(0, 0%, 100%, 0.6);
+}
+
+@media (max-width: 1199px) {
+    body {
+        margin: 0;
+        padding: 5%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--main-background);
+        font-family: 'Inter', sans-serif;
+    }
+    
+    .flex-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 375px;
+        background-color: var(--dark-desaturated-blue);
+        border-radius: 15px;
+    }
+    
+    #img-block > .layer {
+        background: var(--soft-violet);
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        box-sizing: border-box;
+        display: flex;
+    }
+    
+    #img-block > .layer > img {
+        width: 100%;
+        height: auto;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        object-fit: cover;
+        opacity: 0.7;
+    }
+    
+    .flex-container > div {
+        text-align: center;
+    }
+    
+    .insight-box {
+        font-weight: 700;
+    }
+    
+    .insight-box > h1 {
+        color: var(--neutral-white);   
+    }
+    
+    .insight-box > h1 > span {
+        color: var(--soft-violet);
+    }
+    
+    .discover-box {
+        color: var(--main-paragraph);
+        font-weight: 400;   
+    }
+    
+    .stats {
+        color: var(--neutral-white);
+        font-weight: 700;
+        font-size: 2em;
+        line-height: 0.5em;
+        text-transform: uppercase;
+    }
+    
+    .stats-heading {
+        color: var(--stat-headings);
+        text-transform: uppercase;
+    }
+    
+    .flex-container > div:not(#img-block) {
+        padding: 20px;
+    }
+    
+}
+
+
+@media (min-width: 1200px) {
+    body {
+        display: grid;
+        background-color: var(--main-background);
+        font-family: 'Inter', sans-serif;
+    }
+    
+    .grid-container {
+        /* margin-top: 25px 15px 0; */
+        margin: 50px auto 0;
+        display: grid;
+        width: 1280px;
+        background-color: var(--dark-desaturated-blue);
+        grid-template-columns: 1fr 1fr 1fr auto;
+        border-radius: 10px;
+        text-align: center;
+    }
+    
+    #img-block > .layer {
+        background: var(--soft-violet);
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        box-sizing: border-box;
+        display: flex;
+    }
+    
+    #img-block > .layer > img {
+        width: 100%;
+        height: auto;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        object-fit: cover;
+        opacity: 0.7;
+    }
+    
+    #img-block {
+        grid-column: 4/5;
+        grid-row: 1/4;
+    }
+    
+    .insight-box {
+        grid-column: 1/4;
+        grid-row: 1/2;
+    }
+    
+    .discover-box {
+        grid-column: 1/4;
+        grid-row: 2/3;
+        display: grid;
+    }
+    
+    .discover-box > p {
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .companies {
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+    
+    .templates {
+        grid-column: 2/3;
+        grid-row: 3/4;
+    }
+    
+    .queries {
+        grid-column: 3/4;
+        grid-row: 3/4;
+    }
+    
+    .insight-box {
+        font-weight: 700;
+        color: var(--neutral-white);
+    }
+    
+    .insight-box > h1 > span {
+        color: var(--soft-violet);
+    }
+    
+    .discover-box {
+        color: var(--main-paragraph);
+        font-weight: 400;   
+    }
+    
+    .stats {
+        color: var(--neutral-white);
+        font-weight: 700;
+        font-size: 2em;
+        text-transform: uppercase;
+    }
+    
+    .stats-heading {
+        color: var(--stat-headings);
+        text-transform: uppercase;
+    }
+    
+    .grid-container > div:not(#img-block) {
+        padding: 20px;
+    }
+}
